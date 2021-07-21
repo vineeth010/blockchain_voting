@@ -1,0 +1,86 @@
+	body {
+    color: rgb(255, 255, 255);
+    background: url("voting-using-digital-interface-3d-rendering.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    opacity: 0.9;
+    font-size: 30px;
+    background-color: rgba(15, 13, 13, 0.377);
+}
+
+div,
+p,
+h1,
+h2,
+h3 {
+    background-color: rgba(0, 0, 0, 0.534)k;
+}
+
+.register {
+    padding: 15px;
+    width: 60%;
+}
+
+.header {
+    padding: 15px;
+    text-align: center;
+    background: #0c0c0c7a;
+    color: white;
+    font-size: 30px;
+}
+
+.right {
+    margin-left: 10px;
+    float: right;
+    padding: 10px;
+}
+
+a {
+    text-decoration: unset;
+    text-emphasis: none;
+    background-color: transparent;
+    color: unset;
+}
+
+a:hover {
+    color: rgb(90, 89, 89);
+    text-decoration: none;
+}
+
+input {
+    width: 250px;
+    height: 25px;
+    margin: 5px;
+}
+
+button,
+input[type="submit"] {
+    color: rgb(54, 41, 54);
+    font-size: 30px;
+    min-width: 150px;
+    height: 50px;
+    background-color: rgb(86, 243, 86);
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 25px;
+}
+
+td,
+tr,
+th {
+    border: rgb(179, 172, 172) solid 2px;
+}
+
+table {
+    background-color: rgba(0, 0, 0, 0.589);
+    width: 80%;
+}
+
+.table {
+    background-color: rgba(0, 0, 0, 0.61);
+    max-width: 30%;
+    height: 30px;
+}
+
+.result tr:first-of-type {
+    color: rgb(141, 40, 101)
+}
