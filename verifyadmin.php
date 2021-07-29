@@ -16,7 +16,7 @@ $errorr=mysqli_error($conn);
 if ($errorr || $Nrow==0){
     echo $errorr;
     if(!($errorr) && $Nrow==0 ){
-        echo '<h1><br>Incorrect admin credentials</h1><meta http-equiv="refresh" content="2; url=adminlogin.php">';
+        echo '<h1><br>Something Went Wrong!!</h1><meta http-equiv="refresh" content="2; url=adminlogin.php">';
     }
     else{
         echo $errorr;

@@ -1,0 +1,35 @@
+pragma solidity ^0.5.14;
+contract SomeContract {
+    
+    uint[100] public votelist;
+     uint public win;
+     uint public win_votes;
+
+
+function vote(uint _cand) public {
+        votelist[_cand]=votelist[_cand]+1;
+     }
+     
+function vote_reset(uint _cand) public {
+        votelist[_cand]=0;
+     }
+ 
+function winner() public {
+    uint i;
+    uint index=0;
+    uint max=0;
+    for(i=0; i< votelist.length; i++){
+            if(max<=votelist[i])
+            {
+               
+                max=votelist[i];
+                index=i;
+                win=index;
+                win_votes=votelist[index];
+            }
+            
+        }
+
+    }
+    
+}

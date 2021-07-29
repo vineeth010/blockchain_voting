@@ -27,8 +27,8 @@ if(!(isset($_SESSION['admin'])))
 </style>
 <br><br><br><br>
         <form action="registercand.php" method="POST">
-        <input type="text" required name="usn" placeholder="USN"><br>
-        <input type="text" required name="name" placeholder="Name"><br>
+        <input require type="text" name="usn" placeholder="USN" max-length='10'><br>
+        <input type="text" name="name" placeholder="Name"><br>
         <!-- <input type="password" name="pass" placeholder="Re-password"><br> -->
         <!-- <input type="password" name="pass" placeholder="password"><br><br> -->
         <input type="submit" value="Register">     <button><a href="admin.php">Back</a></button>

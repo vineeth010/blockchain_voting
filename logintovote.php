@@ -20,16 +20,21 @@
 </style>
     <br><br><br><br>
         <form action="verifyvoter.php" method="POST">
-        <input type="text" required name="usn" placeholder="USN"><br>
-        <input type="password" required name="pass" placeholder="password"><br><br>
+        <input required type="text" name="usn" placeholder="USN"><br>
+        <input requierd type="password" name="pass" placeholder="password"  pattern="sit123" title="Enter Correct Password" ><br><br>
+     
+
         <input type="submit" value="Login">
         </form>
+
         <br>
       
      </div>
    </div>
 </div>
 </center>
+
+
 
 </body>
 

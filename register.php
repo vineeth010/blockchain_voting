@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registering</title>
+    <title>Regisering</title>
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
@@ -57,14 +57,14 @@ if ($errorr){
 $sql = "insert into voters(usn) values('$usn');";  
 $result = mysqli_query($conn, $sql);
 $errorr=mysqli_error($conn);
-$errorr=mysqli_error($conn);
+
 if ($errorr){
-	echo '<h1> Student Already Exists</h1><br><meta http-equiv="refresh" content="2 url=logup.php">';
+	echo '<h1> </h1><br><meta http-equiv="refresh" content="2 url=logup.php">';
     
 	$conn.die();
 	}
     else{
-        echo '<h1>Successfully Added</h1><br>     <meta http-equiv="refresh" content="2; url=logup.php"> ';   
+        echo '<h1>Successfully Addedd</h1><br>     <meta http-equiv="refresh" content="2; url=logup.php"> ';   
  }
 ?>
     <h2><?php echo $mssg;?></h2>

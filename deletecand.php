@@ -71,6 +71,7 @@ if ($errorr){
 					session_start();
 					unset($_SESSION['result']);
 					$_SESSION['result']=0;
+
            
                            
 
@@ -197,14 +198,14 @@ if ($errorr){
 		"type": "function"
 	}
 ];
-        var add = '0xD6f237cC1E584bF2842ac89199f25dE3AC1Fea93';//contract address
+        var add = '0xE37D1eB8A100F11166C5a9beD974d9444Dc42DA0';
         l = console.log;
 
         let c = new web3.eth.Contract(abi, add);     
 
 		for (let i = 0; i < 10; i++) {
 			c.methods.vote_reset(i).send({
-					from: '0xeDCD10B48e637D3077B69b44F3fE48706220cbAA'
+					from: '0x200669e927C99876f2Ae108D961DB773c5955c98'
 				}).then(result => {});;
 			}
 

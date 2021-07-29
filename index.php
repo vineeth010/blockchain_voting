@@ -1,4 +1,6 @@
 <?php 
+include 'connect.php';
+include 'verify.php';
 session_start();
 
 ?>
@@ -52,24 +54,18 @@ $conn->close();
 
 ?>
 <?php
+
+
 if(!(isset($_SESSION['show']))){
 $_SESSION['show']=0;}
-  $_SESSION['dummy']='<h2 style="color:green">Voting Started</h2>';
-if($_SESSION['show']==1)
+
+$_SESSION['dummy']='<h2 style="color:green">Voting Started</h2>';
+
+if($sw==1)
 {
 echo $_SESSION['dummy'];
 }
-//  if($_SESSION['state']=='start');
-//  {
 
- 
-//  }
-//  if($_SESSION['state']=='stop');
-//  {
-//   $_SESSION['dummy']='';
-
-//  }
-//  echo $_SESSION['dummy'];
 ?>
 <h1>Result Board</h1><br>
 <table >
@@ -80,8 +76,11 @@ echo $_SESSION['dummy'];
 <th style='width:50px'>Dep</th>
 <table class="result">
 <?php 
-if($_SESSION['show']==2)
+if($sw==2)
 {
+include 'result.php';
+$_SESSION['result']=$table;
+  if($_SESSION['result'])
   if($_SESSION['result']!='0' || 0)
   {
 echo $_SESSION['result'];

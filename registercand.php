@@ -85,11 +85,12 @@ if ($errorr){
             $conn.die();
             }
         else{
-            echo '<h1>Successfully Added</h1><br>     <meta http-equiv="refresh" content="2; url=cand.php"> ';   
+            echo '<h1>Successfully Addedd</h1><br>     <meta http-equiv="refresh" content="2; url=cand.php"> ';   
              }
          }
      else{
          echo $errorr;
+         echo '<br>     <meta http-equiv="refresh" content="2; url=cand.php"> ';   
           $conn.die();
      }
      }

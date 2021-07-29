@@ -15,17 +15,31 @@ include 'connect.php';
                 echo $errorr;
                     echo '<h1><br>Something Went Wrong</h1>';
                 }
-           else{ $conn->close();
+           else{ 
+
+            $sql = "insert into voters(usn,password,status) values('$voted','sit123',1);";  
+            
+            $result = mysqli_query($conn, $sql);
+            $errorr=mysqli_error($conn);
+            if ($errorr){
+                echo $errorr;
+                    echo '<h1><br>Something Went Wrong</h1>';
+                }
+               
+            $conn->close();
             $_SESSION['voter']='';
             if($_SESSION['mssg']=='')
             {
                 echo '<meta http-equiv="refresh" content="0; url=index.php">';
             }
-            else{   echo $_SESSION['mssg'];
-            echo '<h1></h1><br>  Data successfully added to BlockChain   <meta http-equiv="refresh" content="2; url=index.php">';   
+            else{
+                
+            echo $_SESSION['mssg'];
+            echo '<h1></h1><br>  Data successfully added to BlockChain   <meta http-equiv="refresh" content="5; url=index.php">';   
             }
 
-$_SESSION['mssg']='';}
+            $_SESSION['mssg']='';
+}
 
 ?>
 <!DOCTYPE html>
@@ -40,4 +54,5 @@ $_SESSION['mssg']='';}
 <body>
     
 </body>
+
 </html></center>

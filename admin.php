@@ -33,7 +33,7 @@ if(!(isset($_SESSION['admin'])))
 
 <?php 
 // echo $_SESSION['show'];
-       include 'result.php'; 
+       //include 'result.php'; 
        ?>
 
 

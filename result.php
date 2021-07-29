@@ -27,15 +27,16 @@ include 'connect.php';
         }
     }
 else{
-    $table='
-
-    <tr>';
+    $table='<tr>';
         $i=0;
         while ($i!=$Nrow) 
         {
             $row=mysqli_fetch_assoc($result);
             $vot=$row['usn'];
-            $depv=$vot[5].$vot[6];
+            if(strlen($vot)>6){
+        
+                $depv=$vot[5].$vot[6];
+        }
             $table.="
             <td style='width:50px'>".$row['id']."</td>
             <td style='width:150px'>".$row['usn']."</td>     

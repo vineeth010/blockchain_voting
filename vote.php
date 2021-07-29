@@ -96,7 +96,7 @@ if ($errorr)
         $errorr=mysqli_error($conn);
         $errorr=mysqli_error($conn);
         if ($errorr){
-	        $_SESSION['mssg']= '<h1>Error while Voting please vote again by re-logging in</h1>'.$errorr;
+	        $_SESSION['mssg']= '<h1>Error while Voting please vote again with fresh login</h1>'.$errorr;
             echo '<meta http-equiv="refresh" content="0; url=Thankyou.php">';
 	    $conn.die();
 	    }
@@ -148,7 +148,7 @@ var x=<?php echo $v;?>;
                 }
             }
 
-            var abi = [
+            var abi =[
 	{
 		"constant": false,
 		"inputs": [
@@ -174,21 +174,6 @@ var x=<?php echo $v;?>;
 			}
 		],
 		"name": "vote_reset",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_i",
-				"type": "uint256"
-			}
-		],
-		"name": "winner",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
@@ -244,9 +229,18 @@ var x=<?php echo $v;?>;
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "winner",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
 	}
 ];
-        var add = '0xD6f237cC1E584bF2842ac89199f25dE3AC1Fea93';//contract address
+        var add = '0x96f6a31b42Ae5DB53BDc090876fD96C2cB4461eA';
         l = console.log;
 
         let c = new web3.eth.Contract(abi, add);
@@ -254,10 +248,10 @@ var x=<?php echo $v;?>;
             // let address = document.getElementById("address").value;
        
             let address =parseInt(<?php echo $v ?>);
-l(address);
+			l(address);	
             c.methods.vote(address).send({
-                from: "0xeDCD10B48e637D3077B69b44F3fE48706220cbAA"
-            }).then(result => {});;
+                from: "0x96f6a31b42Ae5DB53BDc090876fD96C2cB4461eA"
+            }).then(result => {});
 
 
             c.methods.votelist(address).call()

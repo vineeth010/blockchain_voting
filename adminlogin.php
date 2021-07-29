@@ -15,9 +15,9 @@
 
 <style>
 </style>
-    <br><br><h1>Admin</h1><br>
+   <br><h1>Admin</h1><br>
         <form action="verifyadmin.php" method="POST">
-        <input type="text" required name="usn" placeholder="USN"><br>
+        <input type="text" name="usn" placeholder="USN"><br>
         <input type="password" name="pass" placeholder="password"><br><br>
         <input type="submit" value="Login">
         </form>
